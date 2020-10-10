@@ -19,12 +19,17 @@
 		align-items: center;
 		flex-direction: column;
 		
-		h1, h2, h3, p {
+		h1, h2, h3, p, li {
 			color: white;
 		}
 
 		hr {
 			width: 90%;
+		}
+
+		#body__text {
+			width: calc(100% - 100px);
+			margin: 20px 100px 20px 100px;
 		}
 	}
 }

@@ -10,6 +10,10 @@ function Body(props) {
 				<div id="body">
 					<h1>A Smart Tutor Matching Service</h1>
 					<hr />
+					<div id="body__text">
+						<h2>Mission Statement</h2>
+						<ul><li>ReLearn is designed with users in mind to help their tutoring experience</li></ul>
+					</div>
 				</div>
 			</div>
 		</>
