@@ -12,7 +12,7 @@ function Header(props) {
 		<div id="header">
 			{props.children}
 			<Title />
-			<Logout />
+			<Logout logged_in={props.logged_in} login={props.login} />
 		</div>
 	)
 }

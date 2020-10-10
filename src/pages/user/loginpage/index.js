@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Styles
 import './index.scss';
 
 function LoginPage(props) {
-	console.log(props.display_form)
+
+	const [display, setDisplay] = useState(true);
+
 	return (
 		<>
-			<div id="login-page-container" className={props.display ? "display" : ""}>
+			<div id="login-page-container" className={props.display && display ? "display" : ""}>
 				<div id="login-page">
 					<h1>Login</h1>
-					<form id="login-form">
+					<form id="login-form" onSubmit={(event) => {
+						event.preventDefault();
+						props.login(true)
+						setDisplay(false)
+					}}>
 						<label>Username:</label>
 						<input type="text" name="name" placeholder="Username" />
 						<label>Password:</label>

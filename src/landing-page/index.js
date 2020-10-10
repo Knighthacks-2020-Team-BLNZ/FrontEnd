@@ -11,20 +11,20 @@ import './index.scss';
 
 function LandingPage(props) {
 
-	let logged_in = false;
+	const [logged_in, setLoggedIn] = useState(false);
 	const [form, setForm] = useState("");
 	const changeForm = (new_form) => {
 		return () => {
-			console.log("HEY")
 			setForm(new_form);
-			console.log(form + "::")
 		}
 	};
 
 	return (
 		<>
 			<Header
-				logged_in={logged_in}>
+				logged_in={logged_in}
+				login={setLoggedIn}
+			>
 				<NavBar
 					logged_in={logged_in}
 					display_form={changeForm}
@@ -43,6 +43,7 @@ function LandingPage(props) {
 			<LoginPage
 				display={form === 'login'}
 				display_form={changeForm}
+				login={setLoggedIn}
 			/>
 		</>
 	)
