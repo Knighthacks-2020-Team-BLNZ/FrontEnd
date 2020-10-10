@@ -17,21 +17,23 @@ function Nav(props) {
 function LoggedInNav(props) {
 	return (
 		<>
-			<li id="nav__account" className="selectable" {...props.handle_account}>
+			<li id="nav__account" className="selectable" onClick={() => {
+				props.display_form('account');
+			}}>
 				Account
 			</li>
 			<li id="nav__tutors" onClick={props.handle_logout}>
 				<p className="ignore">Tutors</p>
 				<div id="nav__tutors__dropdown">
 					<ul>
-						<li className="selectable" onClick={(
+						<li className="selectable" onClick={() => {
 							props.display_form('match')
-						)}>
+						}}>
 							Match
 						</li>
-						<li className="selectable" onClick={(
+						<li className="selectable" onClick={() => {
 							props.display_form('give_ratings')
-						)}>
+						}}>
 							Give Ratings
 						</li>
 					</ul>
@@ -44,14 +46,14 @@ function LoggedInNav(props) {
 function LoggedOutNav(props) {
 	return (
 		<>
-			<li className="selectable" onClick={(
+			<li className="selectable" onClick={() => {
 				props.display_form('login')
-			)}>
+			}}>
 				Login
             </li>
-			<li className="selectable" onClick={(
+			<li className="selectable" onClick={() => {
 				props.display_form('register')
-			)}>
+			}}>
 				Register
             </li>
 		</>
