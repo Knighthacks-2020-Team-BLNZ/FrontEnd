@@ -12,7 +12,6 @@ import './index.scss';
 function LandingPage(props) {
 
 	let logged_in = false;
-	let current_form = "";
 	const [form, setForm] = useState("");
 
 	return (
