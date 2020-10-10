@@ -9,11 +9,15 @@ import NavBar from '../page-parts/header/nav';
 import './index.scss';
 
 function LandingPage(props) {
+
+	let logged_in = true;
+
 	return (
 		<>
-			<Header>
+			<Header
+				logged_in={logged_in}>
 				<NavBar
-					logged_in={true}
+					logged_in={logged_in}
 					display_form={(string) => {
 						return () => {
 							console.log("Hi")

@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.selectable {
+	cursor: pointer;
+	
+	&::after {
+		content: '';
+		width: 0px;
+		height: 1px;
+		display: block;
+		background: white;
+		transition: 300ms;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}

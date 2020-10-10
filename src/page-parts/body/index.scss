@@ -1,13 +1,30 @@
-#body {
+#body-container {
 	height: 90%;
-	font-size: larger;
-	
-	ul{
-		padding-bottom: 5cm;
-		color: white;
-	}
-	li{
-		line-height: 5cm;
-		font-size: larger;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	#body {
+
+		width: 60%;
+		height: 90%;
+
+		border-radius: 25px;
+		background-color: rgba(.1, .1, .1, .25);
+		backdrop-filter: blur(10px);
+		box-shadow: 10px 10px rgba(.1, .1, .1, .1);
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		
+		h1, h2, h3, p {
+			color: white;
+		}
+
+		hr {
+			width: 90%;
+		}
 	}
 }

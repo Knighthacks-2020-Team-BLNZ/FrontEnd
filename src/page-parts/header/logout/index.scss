@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+
+#logout {
+	font-family: 'Open Sans';
+
+	height: 100%;
+	width: 25%;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.logout__text {
+		// This is logout and stuff
+		float: left;
+		color: white;
+		font-size: 2em;
+	}
+}

@@ -24,10 +24,14 @@ function LoggedInNav(props) {
 				<p className="ignore">Tutors</p>
 				<div id="nav__tutors__dropdown">
 					<ul>
-						<li className="selectable">
+						<li className="selectable" onClick={(
+							props.display_form('match')
+						)}>
 							Match
 						</li>
-						<li className="selectable">
+						<li className="selectable" onClick={(
+							props.display_form('give_ratings')
+						)}>
 							Give Ratings
 						</li>
 					</ul>
