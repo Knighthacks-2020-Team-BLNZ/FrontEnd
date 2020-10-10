@@ -6,7 +6,7 @@ import LangingPage from './landing-page';
 
 
 // Styles
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(
 	<React.StrictMode>
