@@ -4,13 +4,10 @@ import React from 'react';
 import './index.scss';
 
 function LoginPage(props) {
-	console.log(props.display)
+	console.log(props.display_form)
 	return (
 		<>
-			<div id="login-page-container" className={props.display ? "display" : ""} onClick={(event) => {
-				event.preventDefault();
-				console.log(event.currentTarget)
-			}}>
+			<div id="login-page-container" className={props.display ? "display" : ""}>
 				<div id="login-page">
 					<h1>Login</h1>
 					<form id="login-form">
@@ -19,7 +16,17 @@ function LoginPage(props) {
 						<label>Password:</label>
 						<input type="password" name="password" placeholder="Password" />
 						<input type="submit" value="Login" />
+						<div>
+							Not registered? <span>
+								Click here
+							</span>
+						</div>
 					</form>
+					<div className="close_btn" onClick={(
+						props.display_form("register")
+					)}>
+						X
+					</div>
 				</div>
 			</div>
 		</>

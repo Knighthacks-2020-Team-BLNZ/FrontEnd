@@ -13,6 +13,13 @@ function LandingPage(props) {
 
 	let logged_in = false;
 	const [form, setForm] = useState("");
+	const changeForm = (new_form) => {
+		return () => {
+			console.log("HEY")
+			setForm(new_form);
+			console.log(form + "::")
+		}
+	};
 
 	return (
 		<>
@@ -20,12 +27,7 @@ function LandingPage(props) {
 				logged_in={logged_in}>
 				<NavBar
 					logged_in={logged_in}
-					display_form={(new_form) => {
-						return () => {
-							setForm(new_form);
-							console.log(form + "::")
-						}
-					}}
+					display_form={changeForm}
 					handle_account={{}
 						// TODO: All account drop down and stuff
 					}
@@ -38,7 +40,10 @@ function LandingPage(props) {
 			{
 				// Pages below
 			}
-			<LoginPage display={form === 'login'} />
+			<LoginPage
+				display={form === 'login'}
+				display_form={changeForm}
+			/>
 		</>
 	)
 }
