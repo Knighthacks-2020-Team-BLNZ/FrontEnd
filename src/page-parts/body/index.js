@@ -16,10 +16,10 @@ function Body(props) {
 			
 
 			<ul>
-				<h2><center>View your current Tutors</center></h2>
-				<h2><center>Match with a Tutor</center></h2>
-				<h2><center>Match with a Tutor based on Subject</center></h2>
-				<h2><center>Match with a Tutor based on personality</center></h2>
+				<li><h2><center>View your current Tutors</center></h2></li>
+				<li><h2><center>Match with a Tutor</center></h2></li>
+				<li><h2><center>Match with a Tutor based on Subject</center></h2></li>
+				<li><h2><center>Match with a Tutor based on personality</center></h2></li>
 
 			</ul>
 
