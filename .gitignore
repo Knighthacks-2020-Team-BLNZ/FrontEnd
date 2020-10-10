@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# html folder
+/public
+
+# package information
+package.json
+package-lock.json
