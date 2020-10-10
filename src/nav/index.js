@@ -4,41 +4,41 @@ import React from 'react';
 import './index.css';
 
 function Nav(props) {
-    const LoggedIn = <LoggedInNav />;
-    const LoggedOut = <LoggedOutNav />;
+	const LoggedIn = <LoggedInNav {...props} />;
+	const LoggedOut = <LoggedOutNav {...props} />;
 
-    return (
-        <>
-            {props.logged_in ? LoggedIn : LoggedOut}
-        </>
-    )
+	return (
+		<>
+			{props.logged_in ? LoggedIn : LoggedOut}
+		</>
+	)
 }
 
 function LoggedInNav(props) {
-    return (
-        <ul>
-            <li onClick={props.handle_logout}>
-                Logout
+	return (
+		<ul>
+			<li onClick={props.handle_logout}>
+				Logout
             </li>
-        </ul>
-    );
+		</ul>
+	);
 }
 
 function LoggedOutNav(props) {
-    return (
-        <ul>
-            <li onClick={(
-                props.display_form('login')
-            )}>
-                Login
+	return (
+		<ul>
+			<li onClick={(
+				props.display_form('login')
+			)}>
+				Login
             </li>
-            <li onClick={(
-                props.display_form('Register')
-            )}>
-                Register
+			<li onClick={(
+				props.display_form('Register')
+			)}>
+				Register
             </li>
-        </ul>
-    )
+		</ul>
+	)
 }
 
 export default Nav;
