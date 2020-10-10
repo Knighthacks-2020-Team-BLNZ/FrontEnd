@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+
 #navbar {
+	font-family: 'Open Sans';
+
+	
 	display: inline;
 	list-style-type: none;
 	height: 100%;
@@ -22,14 +27,35 @@
 
 		display: flex;
 		flex-direction: column;
+		width: inherit;
 
 		#nav__account__dropdown {
-			height: 0%;
-			overflow: hidden;
+			top: 70px;
+			height: 0px;
+
+			position: absolute;
+			overflow-y: hidden;
+  			background: rgba(.1, .1, .1, .7);
+
+			transition: height 2s;
 		}
 
-		:hover #nav__account__dropdown {
-			height: 100%;
+		&:hover #nav__account__dropdown {
+			height: 105px;
+		}
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 10px;
+
+			li {
+				padding: 0;
+				margin: 0;
+				font-size: inherit;
+			}
 		}
 	}
 }
