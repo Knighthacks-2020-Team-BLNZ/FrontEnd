@@ -4,8 +4,8 @@ import React from 'react';
 import './index.css';
 
 function Nav(props) {
-    const LoggedIn = <LoggedIn_Nav />;
-    const LoggedOut = <LoggedOut_Nav />;
+    const LoggedIn = <LoggedInNav />;
+    const LoggedOut = <LoggedOutNav />;
 
     return (
         <>
@@ -14,7 +14,7 @@ function Nav(props) {
     )
 }
 
-function LoggedIn_Nav(props) {
+function LoggedInNav(props) {
     return (
         <ul>
             <li onClick={props.handle_logout}>
@@ -24,7 +24,7 @@ function LoggedIn_Nav(props) {
     );
 }
 
-function LoggedOut_Nav(props) {
+function LoggedOutNav(props) {
     return (
         <ul>
             <li onClick={(
