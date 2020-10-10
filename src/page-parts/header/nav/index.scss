@@ -17,4 +17,19 @@
 		font-size: 2em;
 		cursor: pointer;
 	}
+
+	#nav__account {
+
+		display: flex;
+		flex-direction: column;
+
+		#nav__account__dropdown {
+			height: 0%;
+			overflow: hidden;
+		}
+
+		:hover #nav__account__dropdown {
+			height: 100%;
+		}
+	}
 }

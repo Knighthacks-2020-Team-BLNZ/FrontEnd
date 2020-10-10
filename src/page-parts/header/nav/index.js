@@ -17,6 +17,19 @@ function Nav(props) {
 function LoggedInNav(props) {
 	return (
 		<>
+			<li id="nav__account" {...props.handle_account}>
+				Account
+				<div id="nav__account__dropdown">
+					<ul>
+						<li>
+							Settings
+						</li>
+						<li>
+							Tutors?
+						</li>
+					</ul>
+				</div>
+			</li>
 			<li onClick={props.handle_logout}>
 				Logout
 			</li>
