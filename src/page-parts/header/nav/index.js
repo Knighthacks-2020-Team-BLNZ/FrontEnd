@@ -17,21 +17,21 @@ function Nav(props) {
 function LoggedInNav(props) {
 	return (
 		<>
-			<li id="nav__account" {...props.handle_account}>
-				<p className="ignore">Account</p>
-				<div id="nav__account__dropdown">
+			<li id="nav__account" className="selectable" {...props.handle_account}>
+				Account
+			</li>
+			<li id="nav__tutors" onClick={props.handle_logout}>
+				<p className="ignore">Tutors</p>
+				<div id="nav__tutors__dropdown">
 					<ul>
 						<li className="selectable">
-							Settings
+							Match
 						</li>
 						<li className="selectable">
-							Tutors?
+							Give Ratings
 						</li>
 					</ul>
 				</div>
-			</li>
-			<li className="selectable" onClick={props.handle_logout}>
-				Logout
 			</li>
 		</>
 	);

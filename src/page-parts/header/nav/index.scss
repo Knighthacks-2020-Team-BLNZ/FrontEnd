@@ -43,13 +43,13 @@
 		}
 	}
 
-	#nav__account {
+	#nav__tutors {
 
 		display: flex;
 		flex-direction: column;
 		width: inherit;
 
-		#nav__account__dropdown {
+		#nav__tutors__dropdown {
 			top: 70px;
 			height: 0px;
 
@@ -57,10 +57,10 @@
 			overflow-y: hidden;
   			background: rgba(.1, .1, .1, .7);
 
-			transition: height 2s;
+			transition: height 700ms;
 		}
 
-		&:hover #nav__account__dropdown {
+		&:hover #nav__tutors__dropdown {
 			height: 105px;
 		}
 
