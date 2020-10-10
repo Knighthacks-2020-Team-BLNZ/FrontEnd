@@ -20,7 +20,27 @@
 		float: left;
 		color: white;
 		font-size: 2em;
+	}
+
+	.ignore {
+		cursor: context-menu;
+	}
+
+	.selectable {
 		cursor: pointer;
+		
+		&::after {
+			content: '';
+			width: 0px;
+			height: 1px;
+			display: block;
+			background: white;
+			transition: 300ms;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
 	}
 
 	#nav__account {

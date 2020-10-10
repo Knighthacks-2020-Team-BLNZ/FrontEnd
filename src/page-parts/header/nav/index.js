@@ -18,19 +18,19 @@ function LoggedInNav(props) {
 	return (
 		<>
 			<li id="nav__account" {...props.handle_account}>
-				Account
+				<p className="ignore">Account</p>
 				<div id="nav__account__dropdown">
 					<ul>
-						<li>
+						<li className="selectable">
 							Settings
 						</li>
-						<li>
+						<li className="selectable">
 							Tutors?
 						</li>
 					</ul>
 				</div>
 			</li>
-			<li onClick={props.handle_logout}>
+			<li className="selectable" onClick={props.handle_logout}>
 				Logout
 			</li>
 		</>
