@@ -12,13 +12,16 @@ function AccountPage(props) {
 					<h1>Account</h1>
 					<form id="account-form" onSubmit={(event) => {
 						event.preventDefault();
+						props.display_form("")
 					}}>
-						<label>info 1?:</label>
-						<input type="text" name="name" placeholder="Name" />
+						<label>Name:</label>
+						<input type="text" name="name" value="John Doe" />
 						<label>Myers Briggs:</label>
-						<input type="text" name="myers-briggs" />
+						<input type="text" name="myers-briggs" value="ISTJ" />
 						<label>Short Description of yourself:</label>
-						<textarea></textarea>
+						<textarea>
+							I like being active and being the leader in a team. I love programming and taking things step by step.
+						</textarea>
 						<input type="submit" value="Update" />
 					</form>
 					<div className="close_btn" onClick={() => {
