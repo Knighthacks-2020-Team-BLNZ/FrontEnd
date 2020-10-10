@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styling
-import  './index.css';
+import './index.css';
 
 function Nav(props) {
     const LoggedIn = <LoggedIn_Nav />;
@@ -9,17 +9,19 @@ function Nav(props) {
 
     return (
         <>
-        {props.logged_in ? LoggedIn : LoggedOut}
+            {props.logged_in ? LoggedIn : LoggedOut}
         </>
     )
 }
 
 function LoggedIn_Nav(props) {
-    <ul>
-        <li onClick={props.handle_logout}>
-            Logout
-        </li>
-    </ul>
+    return (
+        <ul>
+            <li onClick={props.handle_logout}>
+                Logout
+            </li>
+        </ul>
+    );
 }
 
 function LoggedOut_Nav(props) {
