@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '../page-parts/header';
 import Body from '../page-parts/body';
 import NavBar from '../page-parts/header/nav';
+import LoginPage from '../pages/user/loginpage';
 
 // Styles
 import './index.scss';
@@ -31,6 +32,11 @@ function LandingPage(props) {
 					}} />
 			</Header>
 			<Body />
+
+			{
+				// Pages below
+			}
+			<LoginPage />
 		</>
 	)
 }
