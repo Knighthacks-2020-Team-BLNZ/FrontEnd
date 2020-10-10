@@ -15,13 +15,11 @@ function AccountPage(props) {
 						props.display_form("")
 					}}>
 						<label>Name:</label>
-						<input type="text" name="name" value="John Doe" />
+						<input type="text" name="name" defaultValue="John Doe" />
 						<label>Myers Briggs:</label>
-						<input type="text" name="myers-briggs" value="ISTJ" />
+						<input type="text" name="myers-briggs" defaultValue="ISTJ" />
 						<label>Short Description of yourself:</label>
-						<textarea>
-							I like being active and being the leader in a team. I love programming and taking things step by step.
-						</textarea>
+						<textarea defaultValue="I like being active and being the leader in a team. I love programming and taking things step by step." />
 						<input type="submit" value="Update" />
 					</form>
 					<div className="close_btn" onClick={() => {
