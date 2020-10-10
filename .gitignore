@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+/.yarn
 
 # production
 /build
@@ -10,3 +11,7 @@
 # package information
 package.json
 package-lock.json
+
+# Some stray files
+.yarnrc
+.env
