@@ -17,13 +17,15 @@ function LoginPage(props) {
 						<input type="password" name="password" placeholder="Password" />
 						<input type="submit" value="Login" />
 						<div>
-							Not registered? <span>
+							Not registered? <span className="click-here-prompt" onClick={(
+								props.display_form("register")
+							)}>
 								Click here
 							</span>
 						</div>
 					</form>
 					<div className="close_btn" onClick={(
-						props.display_form("register")
+						props.display_form("")
 					)}>
 						X
 					</div>
