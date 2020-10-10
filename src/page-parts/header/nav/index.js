@@ -1,32 +1,32 @@
 import React from 'react';
 
 // Styling
-import './index.css';
+import './index.scss';
 
 function Nav(props) {
 	const LoggedIn = <LoggedInNav {...props} />;
 	const LoggedOut = <LoggedOutNav {...props} />;
 
 	return (
-		<>
+		<ul id="navbar">
 			{props.logged_in ? LoggedIn : LoggedOut}
-		</>
+		</ul>
 	)
 }
 
 function LoggedInNav(props) {
 	return (
-		<ul>
+		<>
 			<li onClick={props.handle_logout}>
 				Logout
-            </li>
-		</ul>
+			</li>
+		</>
 	);
 }
 
 function LoggedOutNav(props) {
 	return (
-		<ul>
+		<>
 			<li onClick={(
 				props.display_form('login')
 			)}>
@@ -37,7 +37,7 @@ function LoggedOutNav(props) {
 			)}>
 				Register
             </li>
-		</ul>
+		</>
 	)
 }
 
