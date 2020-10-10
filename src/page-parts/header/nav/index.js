@@ -44,12 +44,12 @@ function LoggedInNav(props) {
 function LoggedOutNav(props) {
 	return (
 		<>
-			<li onClick={(
+			<li className="selectable" onClick={(
 				props.display_form('login')
 			)}>
 				Login
             </li>
-			<li onClick={(
+			<li className="selectable" onClick={(
 				props.display_form('register')
 			)}>
 				Register

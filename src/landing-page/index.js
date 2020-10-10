@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Components
 import Header from '../page-parts/header';
@@ -11,7 +11,9 @@ import './index.scss';
 
 function LandingPage(props) {
 
-	let logged_in = true;
+	let logged_in = false;
+	let current_form = "";
+	const [form, setForm] = useState("");
 
 	return (
 		<>
@@ -19,9 +21,10 @@ function LandingPage(props) {
 				logged_in={logged_in}>
 				<NavBar
 					logged_in={logged_in}
-					display_form={(string) => {
+					display_form={(new_form) => {
 						return () => {
-							console.log("Hi")
+							setForm(new_form);
+							console.log(form + "::")
 						}
 					}}
 					handle_account={{}
@@ -36,7 +39,7 @@ function LandingPage(props) {
 			{
 				// Pages below
 			}
-			<LoginPage />
+			<LoginPage display={form === 'login'} />
 		</>
 	)
 }

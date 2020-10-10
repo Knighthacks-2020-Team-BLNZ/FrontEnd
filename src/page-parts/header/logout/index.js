@@ -4,11 +4,18 @@ import React from 'react';
 import './index.scss';
 
 function Logout(props) {
-	return (
-		<div id="logout">
-			<p className="logout__text selectable">Logout</p>
-		</div>
-	)
+	if (props.logged_in) {
+		return (
+			<div id="logout">
+				<p className="logout__text selectable">Logout</p>
+			</div>
+		)
+	} else {
+		return (
+			<>
+			</>
+		)
+	}
 }
 
 export default Logout;
