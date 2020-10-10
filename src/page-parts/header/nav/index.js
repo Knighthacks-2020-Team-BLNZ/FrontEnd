@@ -33,7 +33,7 @@ function LoggedOutNav(props) {
 				Login
             </li>
 			<li onClick={(
-				props.display_form('Register')
+				props.display_form('register')
 			)}>
 				Register
             </li>

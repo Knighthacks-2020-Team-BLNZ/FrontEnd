@@ -15,7 +15,7 @@ function LandingPage(props) {
 					logged_in={false}
 					display_form={(string) => {
 						return () => {
-
+							console.log("Hi")
 						}
 					}} />
 			</Header>
