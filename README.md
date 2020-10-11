@@ -10,7 +10,7 @@ The following pages are incoporated inside the frontend:
 <li>- [Landing Page]</li>
 <li>- [Login]</li>
 <li>- [Account Settings]</li>
-<li>- [Tutor Matching] - NA</li>
+<li>- [Tutor Matching]</li>
 </ul>
 
 ## Motivation
