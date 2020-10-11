@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,700i');
+
+#tutormatch-page-container {
+
+	position: fixed;
+
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgba(0.1, 0.1, 0.1, 0.4);
+	backdrop-filter: blur(5px);
+	z-index: 10;
+	pointer-events: none;
+
+	opacity: 0;
+	transition: 500ms opacity;
+
+	&.display {
+		pointer-events: inherit;
+		opacity: 1;
+	}
+
+	#tutormatch-page {
+		width: 20%;
+		height: 60%;
+
+		border-radius: 25px;
+		position: relative;
+		color: black;
+		background-color: rgb(155, 36, 66);
+		box-shadow: 10px 10px rgba(.1, .1, .1, .1);
+
+		h1, h2, h3 {
+			text-align: center;
+			font-size: 3em;
+			color: rgb(200, 200, 200);
+			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: black;
+		}
+
+		p, label {
+			font-size: 1.3em;
+		}
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+
+		text-align: center;
+
+		input, textarea {
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid black;
+			padding: 14px 10px;
+			width: 200px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 250ms;
+			resize: none;
+
+			&:not([type = "submit"]):focus {
+				width: 280px;
+				border-color: #432c32;
+			}
+
+			&[type = "submit"] {
+				cursor: pointer;
+				font-size: 1.2em;
+				width: fit-content;
+				padding: 10px 20px;
+
+				&:hover {
+					border-color: #432c32;
+				}
+			}
+
+			&::placeholder {
+				color: rgba(255, 255,255, .5);
+			}
+		}
+
+		textarea {
+			width: 300px;
+			height: 50px;
+			
+			&:focus {
+				width: 310px !important;
+			}
+		}
+	}
+
+	.close_btn {
+		font-size: 3em;
+		
+		font-family: 'Montserrat';
+		color: white;
+		cursor: pointer;
+
+		position: absolute;
+		right: 20px;
+		top: 10px;
+	}
+
+	.click-here-prompt {
+		color: rgb(29, 30, 117);
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}

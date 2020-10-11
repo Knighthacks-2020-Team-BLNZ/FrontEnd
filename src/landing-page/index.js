@@ -6,6 +6,7 @@ import Body from '../page-parts/body';
 import NavBar from '../page-parts/header/nav';
 import LoginPage from '../pages/user/loginpage';
 import AccountPage from '../pages/account';
+import TutorMatchPage from '../pages/tutormatch';
 
 // Styles
 import './index.scss';
@@ -37,6 +38,10 @@ function LandingPage(props) {
 			/>
 			<AccountPage
 				display={form === 'account'}
+				display_form={setForm}
+			/>
+			<TutorMatchPage
+				display={form === 'tutormatch'}
 				display_form={setForm}
 			/>
 		</>

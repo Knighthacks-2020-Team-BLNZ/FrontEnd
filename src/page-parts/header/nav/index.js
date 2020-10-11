@@ -27,7 +27,7 @@ function LoggedInNav(props) {
 				<div id="nav__tutors__dropdown">
 					<ul>
 						<li className="selectable" onClick={() => {
-							props.display_form('match')
+							props.display_form('tutormatch')
 						}}>
 							Match
 						</li>
