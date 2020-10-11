@@ -14,21 +14,23 @@ function AccountPage(props) {
 
 	const [tutor, setTutor] = useState(0);
 
-	let names = [
-		"Darryl Smith",
-		"Wyatt Donaldson",
-		"Asa Skelly"
-	];
-	let descriptions = [
-		"I employ creative strategies when it comes to education. Feel free to contact me for more information.",
-		"I am a tutor with 5 years of experience",
-		"I provide proper teaching materials that is in aligned to the current syllabus that is bound to be helpful for struggling students."
-	]
-	let images = [
-		Guy1,
-		Guy2,
-		Guy3
-	]
+	let tutors = {
+		1: {
+			user_name: "Darryl Smith",
+			user_writeup: "I employ creative strategies when it comes to education. Feel free to contact me for more information.",
+			image: Guy1
+		},
+		2: {
+			user_name: "Wyatt Donaldson",
+			user_writeup: "I am a tutor with 5 years of experience",
+			image: Guy2
+		},
+		3: {
+			user_name: "Asa Skelly",
+			user_writeup: "I provide proper teaching materials that is in aligned to the current syllabus that is bound to be helpful for struggling students.",
+			image: Guy3
+		}
+	}
 
 	return (
 		<>
@@ -65,18 +67,18 @@ function AccountPage(props) {
 						{tutor > 0 &&
 							<div id="tutor-info">
 								<h1 id="tutor-name">
-									{names[tutor - 1]}
+									{tutors[tutor].user_name}
 								</h1>
-								<img src={images[tutor - 1]} alt="Avatar" className="avatar" />
+								<img src={tutors[tutor].image} alt="Avatar" className="avatar" />
 								<div id="tutor-description">
 									<p>
-										{descriptions[tutor - 1]}
+										{tutors[tutor].user_writeup}
 									</p>
 								</div>
 								<div id="tutor-buttons">
 									<button id="copy-email" onClick={() => {
 										navigator.clipboard.writeText("Email here")
-										NotificationManager.info("You've copied " + names[tutor - 1] + "'s email!", "", 10000);
+										NotificationManager.info("You've copied " + tutors[tutor].user_name + "'s email!", "", 10000);
 									}}>
 										Copy Email
 									</button>
@@ -84,7 +86,7 @@ function AccountPage(props) {
 										<button disabled={tutor === 1} onClick={() => setTutor(tutor - 1)}>
 											Back
 										</button>
-										<button disabled={tutor === names.length} onClick={() => setTutor(tutor + 1)}>
+										<button disabled={tutor === Object.keys(tutors).length} onClick={() => setTutor(tutor + 1)}>
 											Next
 										</button>
 									</div>
