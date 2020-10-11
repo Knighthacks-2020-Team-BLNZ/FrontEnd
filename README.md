@@ -24,6 +24,11 @@ Team BLNZ (creators of the ReLearn) were motivated to create a solution to the t
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses HOC props to change the state of the application (logged in e.g.)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A funtional component is used and hooks used for any state
 
+<b>New pages/pop-ups that displays forms:</b> Follows a symatic and similar pattern to all forms
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Focuses on using flexboxes to organize content
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has smooth css for transitions and user feedback
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses forms to do symatic handling of input-response
+
 ## Tech/framework used
 
 <b>Built with</b>
