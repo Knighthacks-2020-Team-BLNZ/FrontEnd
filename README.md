@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FrontEnd
 
-## Available Scripts
+This is the part of ReLearn that handles all frontend parts! It uses React as it's main technology and is a web application.
 
-In the project directory, you can run:
+## Pages Developed
 
-### `npm start`
+The following pages are incoporated inside the frontend:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<ul>
+<li>- [Landing Page]</li>
+<li>- [Login]</li>
+<li>- [Account Settings]</li>
+<li>- [Tutor Matching]</li>
+</ul>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Motivation
 
-### `npm test`
+Team BLNZ (creators of the ReLearn) were motivated to create a solution to the tutoring crisis we are currently undergoing. The tutoring crisis I described is that there is a plethora of tutors and more than enough students to match, but finding a compatible tutor-student match is hard. Students might end up getting overwhelmed and not getting the help they need for their education.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Code style
 
-### `npm run build`
+<b>The parts of the page is broken in to parts:</b> Has a folder for implementation (index.js, styles.scss coupling)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses SASS for styling
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses HOC props to change the state of the application (logged in e.g.)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A funtional component is used and hooks used for any state
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<b>New pages/pop-ups that displays forms:</b> Follows a semantic style and similar pattern to all forms
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Focuses on using flexboxes to organize content
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has smooth css for transitions and user feedback
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses forms to do symatic handling of input-response
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Tech/framework used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<b>Built with</b>
 
-### `npm run eject`
+<ul>
+<li>- [<a href="https://reactjs.org/">React</a>] - Is the framework of this repo</li>
+<li>- [<a href="https://www.npmjs.com/package/sass">SASS</a>] - Used for its nesting and better look</li>
+<li>- [<a href="https://www.npmjs.com/package/react-notifications-component">React-Notification-Component</a>] - Used for interactive notifications, improving user experience</li>
+<li>- [<a href="https://www.npmjs.com/package/eslint">EsLint</a>] - Used for linting the JSX and making development easier, this is not required!</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Note
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This repository is made using create-react-app in node packaging manager, the source file with the connecting html file is not included in this repository. You can use the default one incorporated in CRA.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Use CRA (create-react-app) to build the node_modules. Then install this repo (as the root directory, so the src and public folder have the same parent as node_modules).<br>Add each dependance (see Frameworks)
+<br /><u><i>Commands:</i></u>
 
-## Learn More
+```
+git clone https://github.com/Knighthacks-2020-Team-BLNZ/FrontEnd.git
+npm create-react-app modules
+# Transfer node_modules from 'modules' to 'Resume'
+# cd to 'Resume'
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Download dependancies
+npm i --save sass
+npm i --save react-notifications-component
+npm i --save eslint
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# I broke down the dependancies but here is one command to install all
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+npm i --save sass react-notifications-component eslint
+```
