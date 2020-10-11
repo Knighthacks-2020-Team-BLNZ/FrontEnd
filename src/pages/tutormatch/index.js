@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
+import { NotificationManager } from 'react-notifications';
 
 // Profile Pics
 import Guy1 from './guy1.jpg';
+import Guy2 from './guy2.jpg';
+import Guy3 from './guy3.jpg';
 
 // Styles
 import './index.scss';
+import 'react-notifications/lib/notifications.css';
 
 function AccountPage(props) {
 
 	const [tutor, setTutor] = useState(0);
 
-	let names = ["John Doe", "Zackary Santana"];
+	let names = [
+		"Darryl Smith",
+		"Wyatt Donaldson",
+		"Asa Skelly"
+	];
 	let descriptions = [
-		"Hi my name is ... isngiujfndaijgnfdijgndfjngijdfsnbgjhdfnsgj John Doe :)",
-		"This is Zackary's biofoisdnfguijnasdiguojndfesuoignsdfgnfsdngidfsnoignsdfignifsdngiosdfngi"
+		"I employ creative strategies when it comes to education. Feel free to contact me for more information.",
+		"I am a tutor with 5 years of experience",
+		"I provide proper teaching materials that is in aligned to the current syllabus that is bound to be helpful for struggling students."
+	]
+	let images = [
+		Guy1,
+		Guy2,
+		Guy3
 	]
 
 	return (
@@ -53,15 +67,18 @@ function AccountPage(props) {
 								<h1 id="tutor-name">
 									{names[tutor - 1]}
 								</h1>
-								<img src={Guy1} alt="Avatar" className="avatar" />
+								<img src={images[tutor - 1]} alt="Avatar" className="avatar" />
 								<div id="tutor-description">
 									<p>
 										{descriptions[tutor - 1]}
 									</p>
 								</div>
 								<div id="tutor-buttons">
-									<button styles={{ cursor: "copy" }} onClick={() => { navigator.clipboard.writeText("Email here") }}>
-										Contact
+									<button id="copy-email" onClick={() => {
+										navigator.clipboard.writeText("Email here")
+										NotificationManager.info("You've copied " + names[tutor - 1] + "'s email!", "", 10000);
+									}}>
+										Copy Email
 									</button>
 									<div id="tutor-navigation">
 										<button disabled={tutor === 1} onClick={() => setTutor(tutor - 1)}>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NotificationContainer } from 'react-notifications';
 
 // Components
 import Header from '../page-parts/header';
@@ -44,6 +45,7 @@ function LandingPage(props) {
 				display={form === 'tutormatch'}
 				display_form={setForm}
 			/>
+			<NotificationContainer />
 		</>
 	)
 }
